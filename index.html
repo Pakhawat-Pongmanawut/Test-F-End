@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TestMyWeb</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
+    <nav id="desktop-nav">
+        <div class="logo">EleXA</div>    
+            <div>
+                <ul class="nav-links">
+                    <li> <a href="#main">หน้าแรก</a> </li>
+                    <li> <a href="#product">ผลิตภัณฑ์ของเรา</a> </li>
+                    <li> <a href="#aboutus">เกี่ยวกับ EGAT EV</a> </li>
+                    <li> <a href="#location">แผนที่สถานีชาร์จ</a> </li>
+                    <li> <a href="#news">ข่าวสารและกิจกรรม</a> </li>
+                    <li> <a href="#contact">ติดต่อเรา</a> </li>
+                </ul>
+            </div>
+    </nav>
     
+    <nav id="hamburger-nav">
+        <div class="logo">EleXA</div>
+        <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                    <li> <a href="#main" onclick="toggleMenu()">หน้าแรก</a> </li>
+                    <li> <a href="#product" onclick="toggleMenu()">ผลิตภัณฑ์ของเรา</a> </li>
+                    <li> <a href="#product" onclick="toggleMenu()">ผลิตภัณฑ์ของเรา</a> </li>
+                    <li> <a href="#aboutus" onclick="toggleMenu()">เกี่ยวกับ EGAT EV</a> </li>
+                    <li> <a href="#location" onclick="toggleMenu()">แผนที่สถานีชาร์จ</a> </li>
+                    <li> <a href="#news" onclick="toggleMenu()">ข่าวสารและกิจกรรม</a> </li>
+                    <li> <a href="#contact" onclick="toggleMenu()">ติดต่อเรา</a> </li>
+            </div>
+        </div>    
+    </nav>
+    <script src="script.js"></script>
 </body>
 </html>
