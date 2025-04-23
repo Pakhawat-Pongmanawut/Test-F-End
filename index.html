@@ -1,46 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TestMyWeb</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio ของฉัน</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">EleXA</div>    
-            <div>
-                <ul class="nav-links">
-                    <li> <a href="#main">หน้าแรก</a> </li>
-                    <li> <a href="#product">ผลิตภัณฑ์ของเรา</a> </li>
-                    <li> <a href="#aboutus">เกี่ยวกับ EGAT EV</a> </li>
-                    <li> <a href="#location">แผนที่สถานีชาร์จ</a> </li>
-                    <li> <a href="#news">ข่าวสารและกิจกรรม</a> </li>
-                    <li> <a href="#contact">ติดต่อเรา</a> </li>
-                </ul>
-            </div>
+
+  <header>
+    <h1>Here’s what I’ve crafted, Take a look around!</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Who am I?</a></li>
+        <li><a href="#projects">What Have I Done?</a></li>
+        <li><a href="#contact">Start Contact, Shall We?</a></li>
+      </ul>
     </nav>
-    
-    <nav id="hamburger-nav">
-        <div class="logo">EleXA</div>
-        <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                    <li> <a href="#main" onclick="toggleMenu()">หน้าแรก</a> </li>
-                    <li> <a href="#product" onclick="toggleMenu()">ผลิตภัณฑ์ของเรา</a> </li>
-                    <li> <a href="#product" onclick="toggleMenu()">ผลิตภัณฑ์ของเรา</a> </li>
-                    <li> <a href="#aboutus" onclick="toggleMenu()">เกี่ยวกับ EGAT EV</a> </li>
-                    <li> <a href="#location" onclick="toggleMenu()">แผนที่สถานีชาร์จ</a> </li>
-                    <li> <a href="#news" onclick="toggleMenu()">ข่าวสารและกิจกรรม</a> </li>
-                    <li> <a href="#contact" onclick="toggleMenu()">ติดต่อเรา</a> </li>
-            </div>
-        </div>    
-    </nav>
-    <script src="script.js"></script>
+  </header>
+
+  <section id="about">
+    <h2>Who am I?</h2>
+    <p>What's up homie it's Tommy(A.K.A), Everybody well know that I'm unhinged sometime and creative. 
+    <br>But most importantly I can cook well as being Front-end too.</p>
+  </section>
+
+  <section id="projects">
+    <h2>What Have I Done?</h2>
+    <div class="project">
+      <h3>Mein Craft 1</h3>
+      <p>Craft details :</p>
+    </div>
+    <div class="project">
+      <h3>Mein Craft 2</h3>
+      <p>Craft details : </p>
+    </div>
+    <div class="project">
+        <h3>Mein Craft 3</h3>
+        <p>Craft details : </p>
+      </div>
+  </section>
+
+  <section id="contact">
+    <h2>Start Contact, Shall We?</h2>
+    <form>
+      <label for="name">Message : </label>
+      <input type="text" id="name" name="name" required>
+      <button type="submit">Yoink!</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pakhawat's Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,8 +1,27 @@
-@media screen and (max-width: 1200px) {
-    #desktop-nav{
-        display: none;
+/* Responsive สำหรับหน้าจอขนาดเล็ก เช่น มือถือ */
+@media (max-width: 768px) {
+
+    /* ลดขนาดหัวข้อ */
+    h1 {
+      font-size: 1.8rem;
     }
-    #hamburger-nav{
-        display: flex;
+  
+    /* ปรับปุ่มให้เต็มความกว้างและลดขนาดตัวอักษร */
+    button {
+      width: 100%;
+      font-size: 14px;
     }
-}
+  
+    /* ให้กล่องแสดงผลยืดหยุ่นตามหน้าจอ */
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .box {
+      width: 90vw !important;
+      font-size: 4vw;
+      text-align: center;
+    }
+  }
+  

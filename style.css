@@ -1,146 +1,120 @@
-/* General */
- 
-@font-face {
-    font-family: 'EleXACustomFont';
-    src: url(DB\ HeaventRounded\ Med\ v3.2.1.ttf)
+/* Font สนุก ๆ จาก Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
+
+/* ตั้งค่าพื้นฐาน */
+body {
+  font-family: 'Chakra Petch', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+/* Header ปั่นแต่พองาม */
+header {
+  background: linear-gradient(to right, #98d6ff, #1ea5ff);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-body{
-    font-family: 'EleXACustomFont';
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
 }
 
-html{
-    scroll-behavior: smooth;
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
 }
 
-p {
-    color: rgb(85, 85, 85);
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-/* Transition */
-
-a, 
-.btn{
-    transition: all 300ms ease;
+nav ul li a:hover {
+  color: #005ca7;
 }
 
-/* Desktop Nav */
-
-nav,
-.nav-links {
-    display: flex;
+/* Section แบบฟีลหน้า Portfolio */
+section {
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 900px;
+  text-align: center;
 }
 
-nav{
-    justify-content: space-around;
-    align-items: center;
-    height: 17vh;
+/* Project Card Style */
+.project {
+  background-color: #99bbd7;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.nav-links{
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(4, 78, 251, 0.15);
 }
 
-a{
-    color: black;
-    text-decoration: none;
-    text-decoration-color: white;
+/* Footer นุ่มนวลแต่เข้ม */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
 }
 
-a:hover{
-    color: rgb(255, 212, 0);
-    text-decoration: underline;
-    text-underline-offset: 1rem;
+/* Button แบบมีพลัง 💥 */
+button {
+  background-color: #ffc889;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.logo{
-    font-size: 4rem;
+button:hover {
+  background-color: #ff9822;
+  transform: scale(1.05);
 }
 
-.logo:hover{
-    cursor: default;
-}
-
-/*Hamburger*/
-
-#hamburger-nav{
-    display: none;
-}
-
-.hamburger-menu{
-    position: relative;
-    display: inline-block;
-}
-
-.hamburger-icon{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 24px;
-    width: 30px;
-    cursor: pointer;
-}
-
-.hamburger-icon span{
-    width: 100%;
-    height: 2px;
-   
-    background-color: black;
-    transition: all 0.3 ease-in-out; 
-}
-
-.menu-links{
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white;
-    width: fit-content;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3 ease-in-out;
-}
-
-.menu-links a {
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul li {
     display: block;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.5rem;
-    color: black;
-    text-decoration: none;
-    transition: all 0.5 ease-in-out;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .project {
+    width: 90%;
+  }
 }
 
-.menu-links li{
-    list-style: none;
-}
+@media (min-width: 769px) {
+  .project {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    margin: 2%;
+  }
 
-.menu-links.open{
-    max-height: 550px;
-}
-
-.hamburger-icon.open span:first-child{
-    transform: rotate(45deg) translate(10px, 5px);
-}
-.hamburger-icon.open span:nth-child(2){
-    opacity: 0;
-}
-.hamburger-icon.open span:last-child{
-    transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child{
-    transform: none; 
-}
-.hamburger-icon span:first-child{
-    opacity: 1;
-}
-.hamburger-icon span:first-child{
-    transform: none; 
+  section {
+    text-align: left;
+  }
 }
