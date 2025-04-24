@@ -1,7 +1,20 @@
-/* Font สนุก ๆ จาก Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
 
-/* ตั้งค่าพื้นฐาน */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header, footer {
+  flex-shrink: 0;
+}
+
 body {
   font-family: 'Chakra Petch', Arial, sans-serif;
   margin: 0;
@@ -10,10 +23,9 @@ body {
   color: #333;
 }
 
-/* Header ปั่นแต่พองาม */
 header {
-  background: linear-gradient(to right, #98d6ff, #1ea5ff);
-  color: white;
+  background: linear-gradient(to right, #ffa787, #FF7F50);
+  color: #003366;
   text-align: center;
   padding: 30px 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -31,17 +43,16 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: #003366;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #005ca7;
+  color: #ffffff;
 }
 
-/* Section แบบฟีลหน้า Portfolio */
 section {
   padding: 40px 20px;
   margin: 30px auto;
@@ -49,14 +60,46 @@ section {
   text-align: center;
 }
 
-/* Project Card Style */
+main section.contact-page-section {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 1100px;
+}
+
+.intro-section.with-image {
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+
+.intro-image {
+  max-width: 750px;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.intro-text {
+  flex-grow: 1;
+  text-align: center;
+}
+
 .project {
-  background-color: #99bbd7;
-  padding: 20px;
+  background-color: #FF7F50;
+  padding: 15px;
   margin: 15px auto;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #003366;
 }
 
 .project:hover {
@@ -64,7 +107,18 @@ section {
   box-shadow: 0 6px 20px rgba(4, 78, 251, 0.15);
 }
 
-/* Footer นุ่มนวลแต่เข้ม */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
 footer {
   background-color: #222;
   color: white;
@@ -73,7 +127,6 @@ footer {
   font-size: 14px;
 }
 
-/* Button แบบมีพลัง 💥 */
 button {
   background-color: #ffc889;
   color: white;
@@ -107,14 +160,24 @@ button:hover {
 }
 
 @media (min-width: 769px) {
-  .project {
-    display: inline-block;
-    width: 45%;
-    vertical-align: top;
-    margin: 2%;
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
   }
 
+.project {
+  width: 45%;
+  margin: 10px;
+}
+
   section {
-    text-align: left;
+    padding: 20px 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
